@@ -142,7 +142,7 @@
                 const title = work['work-summary'][0]?.title?.title?.value || "Untitled";
                 const url = work['work-summary'][0]?.url?.value || "#";
                 const year = work['work-summary'][0]?.['publication-date']?.year?.value || "Unknown Year";
-                const journal = work['work-summary'][0]?.['journal-title']?.value || "Unknown Journal";
+                const journal = work['work-summary'][0]?.['journal-title']?.value || "Journal";
                 
                 if (!pubByYear[year]) {
                     pubByYear[year] = [];
