@@ -70,7 +70,7 @@
     
     <section id="research">
         <h2>Research</h2>
-        <p>My research focuses on the development of catalysts, mainly zeolites and porous materials, for various applications.</p>
+        <p>Our research focuses on the development of catalysts, mainly zeolites and porous materials, for various applications.</p>
     </section>
 
     <section id="team">
@@ -80,7 +80,7 @@
             <li><a href="michalmazur.html">Michal Mazur</a></li>
             <li><a href="team/member2.html">Monika Remzova</a></li>
             <li><a href="team/member3.html">Namsun Kim</a></li>
-            <li><a href="team/member4.html">Member 4</a></li>
+            <li><a href="team/member4.html">Daria Sudakova</a></li>
             <li><a href="team/member5.html">Member 5</a></li>
             <li><a href="team/member6.html">Member 6</a></li>
             <li><a href="team/member7.html">Member 7</a></li>
@@ -121,7 +121,7 @@
 
     <script>
         async function fetchPublications() {
-            const orcidId = "0000-0001-5044-5284"; // Replace with your ORCID ID
+            const orcidId = "0000-0001-5044-5284";
             const response = await fetch(`https://pub.orcid.org/v3.0/${orcidId}/works`, {
                 headers: { 'Accept': 'application/json' }
             });
@@ -132,18 +132,19 @@
             }
             
             const data = await response.json();
-            const works = data.group;
+            const works = data.group || [];
             let pubByYear = {};
             
             works.forEach(work => {
-                const title = work['work-summary'][0]['title']['title'].value;
-                const url = work['work-summary'][0]['url'] ? work['work-summary'][0]['url']['value'] : "#";
-                const year = work['work-summary'][0]['publication-date']?.year?.value || "Unknown Year";
+                const title = work['work-summary'][0]?.title?.title?.value || "Untitled";
+                const url = work['work-summary'][0]?.url?.value || "#";
+                const year = work['work-summary'][0]?.['publication-date']?.year?.value || "Unknown Year";
+                const journal = work['work-summary'][0]?.['journal-title']?.value || "Unknown Journal";
                 
                 if (!pubByYear[year]) {
                     pubByYear[year] = [];
                 }
-                pubByYear[year].push(`<li><a href="${url}" target="_blank">${title}</a></li>`);
+                pubByYear[year].push(`<li><strong>${journal}:</strong> <a href="${url}" target="_blank">${title}</a></li>`);
             });
             
             let pubListHTML = "";
@@ -151,7 +152,7 @@
                 pubListHTML += `<h3>${year}</h3><ul>${pubByYear[year].join('')}</ul>`;
             });
             
-            document.getElementById("publications-list").innerHTML = pubListHTML;
+            document.getElementById("publications-list").innerHTML = pubListHTML || "<p>No publications found.</p>";
         }
         
         fetchPublications();
