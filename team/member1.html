@@ -7,6 +7,21 @@
     <style>
         body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
         header { background: #004080; color: white; text-align: center; padding: 2em; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
+        .social-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            transition: 0.3s;
+        }
+        .social-icons img:hover {
+            opacity: 0.7;
+        }
         .container { max-width: 800px; margin: auto; padding: 20px; }
         section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
         footer { background: #002244; color: white; text-align: center; padding: 1em; margin-top: 20px; }
@@ -14,8 +29,14 @@
 </head>
 <body>
     <header>
-        <h1>[Name]</h1>
+        <h1>Michal Mazur</h1>
         <p>Researcher at MM Laboratory</p>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/michal-mazur-62a3aa104/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+            </a>
+        </div>
     </header>
     
     <div class="container">
@@ -40,7 +61,7 @@
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: [Email]</p>
-            <p>LinkedIn: <a href="[LinkedIn Profile]" target="_blank">[Name]</a></p>
+            
         </section>
     </div>
     
