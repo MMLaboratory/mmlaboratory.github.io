@@ -58,9 +58,9 @@
         
         <section id="metrics">
             <h2>Metrics</h2>
-            <p><strong>Google Scholar Citations:</strong> <span id="citations">Loading...</span></p>
-            <p><strong>h-index:</strong> <span id="h-index">Loading...</span></p>
-            <p><strong>i10-index:</strong> <span id="i10-index">Loading...</span></p>
+            <p><strong>Google Scholar Citations:</strong> <span id="citations">1897</span></p>
+            <p><strong>h-index:</strong> <span id="h-index">24</span></p>
+            <p><strong>i10-index:</strong> <span id="i10-index">46</span></p>
         </section>
 
         <section id="publications">
@@ -132,20 +132,7 @@
         fetchPublications();
     </script>    
 
-    <script>
-    // Fetch data from your Flask backend
-    fetch('/metrics')
-        .then(response => response.json())
-        .then(data => {
-            // Update the HTML with the fetched data
-            document.getElementById('citations').innerText = data.citations;
-            document.getElementById('h-index').innerText = data.h_index;
-            document.getElementById('i10-index').innerText = data.i10_index;
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
-    </script>
+
 
 </body>
 </html>
