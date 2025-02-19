@@ -8,7 +8,7 @@
         body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
         header { background: #004080; color: white; text-align: center; padding: 2em; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
         
-        .social-icons { position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; }
+        .social-icons { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
         .social-icons img { width: 40px; height: 40px; transition: 0.3s; }
         .social-icons img:hover { opacity: 0.7; }
 
@@ -18,14 +18,57 @@
         .container { max-width: 1200px; margin: auto; padding: 20px; }
         section { background: white; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
         footer { background: #002244; color: white; text-align: center; padding: 1em; margin-top: 20px; }
-        .footer-container { display: flex; justify-content: space-between; align-items: center; }
-        .visitor-counter { text-align: right; }
+        .footer-container { display: flex; flex-direction: column; align-items: center; }
+        .visitor-counter { text-align: center; margin-top: 10px; }
+
+        @media (min-width: 600px) {
+            .footer-container { flex-direction: row; justify-content: space-between; }
+        }
+
+        img { max-width: 100%; height: auto; }
+
+        #team { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .team-member { text-align: center; margin-bottom: 20px; flex: 1 1 200px; }
+
+        .team-member img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #004080;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #002244;
+        }
 
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             header { padding: 1em; }
-            .social-icons { position: static; margin-top: 1em; justify-content: center; gap: 15px; }
-            nav a { display: inline-block; margin: 5px; font-size: 0.9em; }
+            .social-icons { margin-top: 1em; justify-content: center; gap: 15px; }
+            nav a { display: block; margin: 5px 0; font-size: 0.9em; }
             section { padding: 20px; margin-bottom: 10px; }
             footer { font-size: 0.9em; }
             .footer-container { flex-direction: column; align-items: center; }
@@ -43,16 +86,6 @@
 </head>
 
 <body>
-    <script>
-        if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-            window.location.href = "m.index.html";
-        }
-    </script>
-     
-        
-
-    
-
     <header>
         <h1>MM Laboratory</h1>
         <p>Synthesis of Materials | Electron Microscopy | Physical Chemistry | Catalysts Design</p>
@@ -163,18 +196,10 @@
     </section>
     
     <section id="publications">
-        <ul>
-            <h2>Publications</h2>
-            <p>Here is a list of selected publications fetched from ORCID:</p>
-            <div id="publications-list"></div>
-            
-        </ul>
-
-
-        
+        <h2>Publications</h2>
+        <p>Here is a list of selected publications fetched from ORCID:</p>
+        <div id="publications-list"></div>
     </section>
-    
-
     
     <section id="contact">
         <h2>Contact</h2>
