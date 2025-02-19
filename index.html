@@ -28,27 +28,47 @@
 
         img { max-width: 100%; height: auto; }
 
-        #team { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .team-member { text-align: center; margin-bottom: 20px; flex: 1 1 200px; }
+        #team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .team-member img {
-    
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1 1 200px;
+    max-width: 200px; /* Ensure a maximum width to prevent overlap */
+}
+
+.image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s; }
+    transition: transform 0.3s;
+}
 
-    .team-member img:hover {
-    transform: scale(1.1); }
+.team-member img:hover {
+    transform: scale(1.1);
+}
 
-    .team-member h3 {
+.team-member h3 {
     margin: 10px 0;
     font-size: 1.2em;
-    color: #004080; }
+    color: #004080;
+}
 
-    .button {
+.button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
@@ -56,10 +76,12 @@
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s; }
+    transition: background-color 0.3s;
+}
 
-    .button:hover {
-    background-color: #002244; }
+.button:hover {
+    background-color: #002244;
+}
     </style>
 </head>
 
@@ -120,63 +142,81 @@
         
         <div class="team-member">
             <a href="team/member1.html">
-                <img src="img/michal.jpg" alt="Michal Mazur">
+                <div class="image-container">
+                    <img src="img/michal.jpg" alt="Michal Mazur">
+                </div>
             </a>
             <h3>Michal Mazur</h3>
             <a href="team/member1.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member2.html">
-                <img src="img/monika.jpg" alt="Monika Remzova">
+                <div class="image-container">
+                    <img src="img/monika.jpg" alt="Monika Remzova">
+                </div>
             </a>
             <h3>Monika Remzova</h3>
             <a href="team/member2.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member3.html">
-                <img src="img/namsun.jpg" alt="Namsun Kim">
+                <div class="image-container">
+                    <img src="img/namsun.jpg" alt="Namsun Kim">
+                </div>
             </a>
             <h3>Namsun Kim</h3>
             <a href="team/member3.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member4.html">
-                <img src="img/daria.jpg" alt="Daria Sudakova">
+                <div class="image-container">
+                    <img src="img/daria.jpg" alt="Daria Sudakova">
+                </div>
             </a>
             <h3>Daria Sudakova</h3>
             <a href="team/member4.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member5.html">
-                <img src="img/anna.jpg" alt="Anna Laštovičková">
+                <div class="image-container">
+                    <img src="img/anna.jpg" alt="Anna Laštovičková">
+                </div>
             </a>
             <h3>Anna Laštovičková</h3>
             <a href="team/member5.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member6.html">
-                <img src="img/adela.jpg" alt="Adéla Olšovská">
+                <div class="image-container">
+                    <img src="img/adela.jpg" alt="Adéla Olšovská">
+                </div>
             </a>
             <h3>Adéla Olšovská</h3>
             <a href="team/member6.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member7.html">
-                <img src="img/frantisek.jpg" alt="František Krakl">
+                <div class="image-container">
+                    <img src="img/frantisek.jpg" alt="František Krakl">
+                </div>
             </a>
             <h3>František Krakl</h3>
             <a href="team/member7.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member8.html">
-                <img src="img/samuel.jpg" alt="Samuel Kolesár">
+                <div class="image-container">
+                    <img src="img/samuel.jpg" alt="Samuel Kolesár">
+                </div>
             </a>
             <h3>Samuel Kolesár</h3>
             <a href="team/member8.html" class="button">View Profile</a>
         </div>
         <div class="team-member">
             <a href="team/member9.html">
-                <img src="images/tomas.jpg" alt="Tomáš Dudek">
+                <div class="image-container">
+                    <img src="images/tomas.jpg" alt="Tomáš Dudek">
+                </div>
             </a>
             <h3>Tomáš Dudek</h3>
             <a href="team/member9.html" class="button">View Profile</a>
