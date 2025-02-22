@@ -104,7 +104,7 @@
 <body>
     <header>
         <h1>Archive</h1>
-        <p>Older Media Links & News</p>
+        <p>Older Media Links & Information</p>
     </header>
     
     <nav>
@@ -113,12 +113,11 @@
     </nav>
     
     <div class="container">
-        <section id="old-news">
-            <h2>Older News</h2>
+        <section id="information">
+            <h2>Older Information</h2>
             <ul>
                 <li>[Older News Item 1]</li>
-                <li>[Older News Item 2]</li>
-                <li>[Older News Item 3]</li>
+
             </ul>
         </section>
         
@@ -126,8 +125,7 @@
             <h2>Older Media Links</h2>
             <ul>
                 <li><a href="[Media Link 1]" target="_blank">[Media Title 1]</a></li>
-                <li><a href="[Media Link 2]" target="_blank">[Media Title 2]</a></li>
-                <li><a href="[Media Link 3]" target="_blank">[Media Title 3]</a></li>
+
             </ul>
         </section>
     </div>
