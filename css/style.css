@@ -14,3 +14,9 @@
 }
 header { background: var(--primary); }
 nav a:hover { color: var(--accent); }
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* ensures navbar stays above content */
+}
