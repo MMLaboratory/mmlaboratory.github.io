@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    nav a { display: block; margin: 10px 0; }
+    .social-icons { flex-direction: column; align-items: flex-start; }
+    .team-member {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
