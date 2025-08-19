@@ -6,3 +6,11 @@
         max-width: 100%;
     }
 }
+
+:root {
+  --primary: #004080;
+  --secondary: #002244;
+  --accent: #00aaff;
+}
+header { background: var(--primary); }
+nav a:hover { color: var(--accent); }
